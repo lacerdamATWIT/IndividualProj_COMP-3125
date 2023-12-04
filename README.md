@@ -19,4 +19,13 @@ Questions:
 2. Assuming Number of Collected Volumes affects Sales what is the correlation between them.
 3. Can we predict what would be the best selling Publisher.
 
+Methods:
+1. Training and Testing Models.
+2. Numpy.
+3. Pandas.
+4. Matplotlib - for histograms.
+5. Seaborn - for heat map.
+6. SciKit - for linear regression.
+
+
 
