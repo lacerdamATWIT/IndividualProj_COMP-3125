@@ -50,3 +50,31 @@ Multi: Manga targeted for multiple demographics.
 
 ![Local Image](graphs/improveddemographichist.png)
 
+For the second question: "Assuming Number of Collected Volumes affects Sales what is the correlation between them?". Once again was a simple vizualization answer, however I wanted to check as much as possible if there were no correlations in the dataset so there were a few alterations to my heatmaps. The safest assumption is that the more volumes a manga series have the longer it has been running so the more sales it would have had since it would have a bigger fanbase and loyal fans so even its average should be higher than a newer series that became popular suddenly.
+However, that is not what the heatmaps revealed. None of the variables were related to sales, highest positive correlation in the dataset was between "Average sales per volume in million(s)" and "Approximate sales in million(s)", which is to be expected since these are both sales in millions. Even then, there correlation was only of 0.52, which although above a 50%, it is not a significant correlation. 
+
+![Local Image](graphs/dummiesheatmap.png)
+This is the heatmap for the dummy variables I created from the Serialized variable. Based on the dates provided in the Serialized collumn, three boolean variables were created to inform if the manga series was Ongoing, Finalized or On Hiatus. 
+Obviously, Finalized and Ongoing are negatively correlated. Other than that there is not signoficant correlation in this heatmap.
+
+![Local Image](graphs/volumesheatmap.png)
+This is a heatmap for the relationship of "Approximate sales in million(s)" and the volume variables, as I mentioned before I wanted to test if longevity was related to sales, as that is my main question.
+
+![Local Image](graphs/statusheatmap.png)
+This is a heatmap between the sales, volumes, and most popular demographics and publishers. To check if popularity publisher or demographic could give an edge to sales.
+
+For the third question: "Can we safely predict sales in milions(s) based on the variables in the dataset?"
+I divided the dataset on 70% training and 30% testing. So the dataset was split up in a randomized way.
+After doing a few linear regression models I was able to conclude that the best predicting variables for the "Approximate sales in million(s)" variable was the two volume based variables: "Average sales per volume in million(s)" and "No. of collected volumes". I attemped also making demographic and publisher into dummy variables, however that actually consistently brought down the effectiveness from the model to below 60%. So I decided to stay with the two variables as that had a wide R-squared range between 63% and 73%. Although, not great given the dataset does not provide a lot of numerical variables. But a solid R-square value that has chance to be improved by other models. 
+
+**Discussions**
+The answer might imply my original assumption that longevity might lead to higher sales of a manga. If I can work more on this project later I will attempt to improve the dataset by also including how many years the manga series ran for. 
+If I could modify the dataset further to experiment more I would add variables regarding anime adaptations. Was the manga series adapted into an anime? By which studio? Since there is a more clear bias to certain studios compared to publishers. I would include release schudule frequesncy, there are manga that are updated weekly and that increases sales and fans hype, and there are manga where it might be updated only every couple months.  How many official languages does the manga series have translations for, although the main target is japanese audiance, there are some that pick up on sales in other countries. Lastly I would increase the number of rows to at least 500 rows. 
+
+It is not a lot of change, but I believe these variables could have opened mpre possibilities to playing around with the dataset.
+
+I attempted a random forest model for this project, since I am already familiar with it in other coding languages, however I cou ld not make it work. It might have been because of the variable I was using since I attempted to used a dummy variable version of Publisher to see if it is possible to predict the most popular manga series based on Publisher and sales. If I continue to work on this project, my next step is to be able to make the RF model work. 
+
+
+
+
