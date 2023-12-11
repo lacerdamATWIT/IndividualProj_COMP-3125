@@ -28,6 +28,7 @@ Individual Project for Data Science Fundamentals for Fall 2023
 5. sklearn.metrics and mean_squared_error and r2_score - Check if the prediction model is reliable and could be trusted for any assorted set of training and testing datas. 
 
 **Results**
+
 For the first question: "What is the most popular Author/Publisher/Demographic?" was simple to answer. Just needed to run the command: df['desired_variable'].value_counts(). Due to a few variables repeating but not being counted as the same categorical value I ran the replacing command to modify the variables that were the same company or a combination of demographics into a new categorical value. 
 After modifications to make the list of authors, publishers and demograpphics cleaner visually I made them into histograms for better visual display.
 The results are:
@@ -68,6 +69,7 @@ I divided the dataset on 70% training and 30% testing. So the dataset was split 
 After doing a few linear regression models I was able to conclude that the best predicting variables for the "Approximate sales in million(s)" variable was the two volume based variables: "Average sales per volume in million(s)" and "No. of collected volumes". I attemped also making demographic and publisher into dummy variables, however that actually consistently brought down the effectiveness from the model to below 60%. So I decided to stay with the two variables as that had a wide R-squared range between 63% and 73%. Although, not great given the dataset does not provide a lot of numerical variables. But a solid R-square value that has chance to be improved by other models. 
 
 **Discussions**
+
 The answer might imply my original assumption that longevity might lead to higher sales of a manga. If I can work more on this project later I will attempt to improve the dataset by also including how many years the manga series ran for. 
 If I could modify the dataset further to experiment more I would add variables regarding anime adaptations. Was the manga series adapted into an anime? By which studio? Since there is a more clear bias to certain studios compared to publishers. I would include release schudule frequesncy, there are manga that are updated weekly and that increases sales and fans hype, and there are manga where it might be updated only every couple months.  How many official languages does the manga series have translations for, although the main target is japanese audiance, there are some that pick up on sales in other countries. Lastly I would increase the number of rows to at least 500 rows. 
 
